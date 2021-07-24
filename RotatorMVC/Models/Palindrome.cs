@@ -9,7 +9,7 @@ namespace RotatorMVC.Models
     {
         public string InputWord { get; set; }
         public string ReversedWord { get; set; }
-        public bool IsPalindrom { get; set; }
+        public bool IsPalindrome { get; set; }
         public string Message { get; set; }
     }
 }

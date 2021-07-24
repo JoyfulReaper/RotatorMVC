@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RotatorMVC.Helpers;
 using RotatorMVC.Models;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,13 @@ namespace RotatorMVC.Controllers
         {
             Palindrome model = new Palindrome();
             return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Rotator(Palindrome palindrome)
+        {
+            return View(PalindromeHelper.CheckPalindrome(palindrome));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
