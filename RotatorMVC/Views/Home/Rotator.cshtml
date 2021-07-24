@@ -45,7 +45,14 @@
             <h2 class="mt-5 border-bottom border-2">Palindrom Result</h2>
             <div class="table-responsive mb-5">
                 <p id="results">
-                    @Model.Message
+                    @if (Model.IsPalindrome)
+                    {
+                        <span style="color: green;">@Model.Message</span>
+                    }
+                    else
+                    {
+                        <span style="color: red;">@Model.Message</span>
+                    }
                 </p>
             </div>
         </div>
