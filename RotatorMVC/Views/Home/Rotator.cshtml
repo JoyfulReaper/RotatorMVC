@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Rotator";
+}
+
+@model RotatorMVC.Models.Palindrome
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
+
+        <div class="col order-last order-lg-first border-2 border-end">
+            <h1 class="display-5 fw-bold lh-1 mb-3 logoFont">Rotator: A Coding Challenge</h1>
+            <h4 class="lead">
+                Rotator is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backwards
+                as forward. Using C# and the MVC pattern we detect if a word or phrase is a palindrome.
+            </h4>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="col d-flex align-content-center">
+            <img src="~/img/rotator.webp" class="img-fluid center-block d-block mx-auto" alt="Rotator Logo">
+        </div>
+
+    </div>
+
+    <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col-6">
+
+        </div>
+        <div class="col">
+            <h5>Enter a string</h5>
+            <form class="row gy-2 gx-3" asp-action="Rotator" asp-controller="Home" method="post">
+                <div class="col">
+                    <input asp-for="InputWord" class="form-control" value="@Model.InputWord" placeholder="Type a word or phrase" />
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-start justify-content-lg-end">
+                    <button id="btnSubmit" type="submit" class="btn btn-dark btn-lg">Palindrome Test</button>
+                </div>
+            </form>
+
+            <h5 class="mt-5 border-bottom border-2">Reversed Result</h5>
+            <div class="col">
+                <p class="form-control">@Model.ReversedWord</p>
+            </div>
+
+            <h2 class="mt-5 border-bottom border-2">Palindrom Result</h2>
+            <div class="table-responsive">
+                <p id="results">
+                    @Model.Message
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
