@@ -11,6 +11,11 @@ namespace RotatorMVC.Helpers
     {
         public static Palindrome CheckPalindrome(Palindrome palindrome)
         {
+            if(string.IsNullOrEmpty(palindrome.InputWord))
+            {
+                palindrome.InputWord = "Rotator";
+            }
+
             string inputWord = palindrome.InputWord;
             string reversedWord = string.Empty;
 
