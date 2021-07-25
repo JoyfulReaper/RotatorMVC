@@ -3,4 +3,4 @@ Rotator is a palindrome. A palindrome is a word, phrase, or sequence that reads 
 
 HTML5, Bootstrap 5, CSS3, and C# MVC.
 
-You can see the demo running live here: https://kgivler.com/RotatorMVC
+You can see the demo running live here: https://rotator.kgivler.com/
